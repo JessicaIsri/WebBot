@@ -3,12 +3,12 @@
 Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 
 # Integrantes
-* Cesar Satos (Scrum Master)
+* Cesar Santos (Scrum Master)
 * Felipe Braga
 * Giovanni Guidance
 * Jessica Dias
 * Jonatas Ferreira
-
+* Nathan
 
 # Objetivo
 Aumentar os laços de relacionamento entre os alunos do 6º e 1º Semestre de Banco de Dados.
