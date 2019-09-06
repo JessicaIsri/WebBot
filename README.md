@@ -36,7 +36,7 @@ Criar um Webbot capaz de facilitar a pesquisa de mercado para pequenas empresas 
 * Varrendo links de alguns sites através do Webbot; 
 * Salvando os dados em um banco NoSQL. Logo após faremos a limpeza e análise dos dados, afim de aferir padrões e/ou tendências.
 
-###Problemas/Dificuldades
+### Problemas/Dificuldades
 * Disponibilidade dos Dados
 * Qualidade dos Dados
 * Relevância das informações
