@@ -40,7 +40,9 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 # Caso de Uso
 * Descobrir tendências, melhores localizações e insights direcionado para pessoas que desejam abrir um negócio em São José dos Campos.
 
-![Alt text](https://files.slack.com/files-pri/TMFBN5SJU-FN3GSMJTW/img-20190827-wa0008.jpg?raw=true "Title")
+<p align="center">
+  <img src="https://imgur.com/a/mvX8Ya9?raw=true" width="350" title="Casos de Uso">
+</p>
 
 ### Como?
 * Varrendo links de alguns sites através do Webbot; 
