@@ -11,9 +11,9 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 * Nathan
 
 # Objetivo
-Aumentar os laços de relacionamento entre os alunos do 6º e 1º Semestre de Banco de Dados.
-Atráves do auxilio do PO/Scrum Master os alunos do 1º Semestre desenvolverão um Webbot para rapsgagem ou teste de alcance de propagandas de MKT.
-Criar um Webbot capaz de facilitar a pesquisa de mercado para pequenas empresas de São José dos Campos.
+* Aumentar os laços de relacionamento entre os alunos do 6º e 1º Semestre de Banco de Dados.
+* Atráves do auxilio do PO/Scrum Master os alunos do 1º Semestre desenvolverão um Webbot para rapsgagem ou teste de alcance de propagandas de MKT.
+* Criar um Webbot capaz de facilitar a pesquisa de mercado para pequenas empresas de São José dos Campos.
 
 # Ferramentas
 * GitKraken
@@ -23,14 +23,26 @@ Criar um Webbot capaz de facilitar a pesquisa de mercado para pequenas empresas 
 * Trello + Cartolina
 * BD Firebase
 * Python
+* Django
+* 
 
 ### Bibliotecas do Python
 * Selenium
 * OS
 * Math
 
+### Extensões do Visual Studio Code
+* Python by Microsoft
+* Git Lens
+* Django
+* Pyton Extension Pack
+
 # Caso de Uso
 * Descobrir tendências, melhores localizações e insights direcionado para pessoas que desejam abrir um negócio em São José dos Campos.
+
+<p align="center">
+  <img src="https://files.slack.com/files-pri/TMFBN5SJU-FN3GSMJTW/img-20190827-wa0008.jpg?raw=true" width="350" title="Casos de Uso">
+</p>
 
 ### Como?
 * Varrendo links de alguns sites através do Webbot; 
@@ -45,5 +57,5 @@ Criar um Webbot capaz de facilitar a pesquisa de mercado para pequenas empresas 
 
 
 # Links Úteis
-[Site da FATEC](http://fatecsjc-prd.azurewebsites.net/)
-[Curso Gratuito de Git](https://www.udemy.com/git-e-github-para-iniciantes/)
+* [Site da FATEC](http://fatecsjc-prd.azurewebsites.net/)
+* [Curso Gratuito de Git](https://www.udemy.com/git-e-github-para-iniciantes/)
