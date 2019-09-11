@@ -56,6 +56,13 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 * Aprender novas Tecnologias
 * Prazo
 
+# Lista de afazeres
+* BD Firebase  (Responsável - Giovani)
+* Raspagem (Responsável - Jessica)
+* FrontEnd (Responsável - Igor)
+* BackEnd (Responsável - Felipe)
+* Documentação (Responsável - Nathan)
+
 
 # Links Úteis
 * [Site da FATEC](http://fatecsjc-prd.azurewebsites.net/)
