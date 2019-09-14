@@ -12,6 +12,9 @@ chrome.get('https://www.google.com.br')
 chrome.find_element_by_xpath('//*[@id="tsf"]/div[2]/div/div[1]/div/div[1]/input')
 
 #Encontra um elemento via id
+
+
+
 chrome.find_element_by_name('q')
 
 #Encontra um elemento via tag
