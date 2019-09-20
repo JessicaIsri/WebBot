@@ -39,6 +39,8 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 # Caso de Uso
 * Descobrir tendências, melhores localizações e insights direcionado para pessoas que desejam abrir um negócio em São José dos Campos.
 
+![Alt Text](https://gitlab.com/cesaraugusto98/webbot/blob/master/Imagens/IMG-20190827-WA0037.jpg)
+
 ### Como?
 * Varrendo links de alguns sites através do Webbot; 
 * Salvando os dados em um banco NoSQL. Logo após faremos a limpeza e análise dos dados, afim de aferir padrões e/ou tendências.
