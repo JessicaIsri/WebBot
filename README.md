@@ -24,7 +24,6 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 * BD Firebase
 * Python
 * Django
-* 
 
 ### Bibliotecas do Python
 * Selenium
@@ -39,11 +38,6 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 
 # Caso de Uso
 * Descobrir tendências, melhores localizações e insights direcionado para pessoas que desejam abrir um negócio em São José dos Campos.
-
-![alt text](https://imgur.com/Sk40Tgy)
-<p align="center">
-  <img src="https://imgur.com/Sk40Tgy?raw=true" width="350" title="Casos de Uso">
-</p>
 
 ### Como?
 * Varrendo links de alguns sites através do Webbot; 
