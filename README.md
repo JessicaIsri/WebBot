@@ -64,3 +64,4 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 * [Site da FATEC](http://fatecsjc-prd.azurewebsites.net/)
 * [Curso Gratuito de Git](https://www.udemy.com/git-e-github-para-iniciantes/)
 * * [Matriz de habilidades](https://docs.google.com/spreadsheets/d/1bA2v59yjTS5VrWOlA5YAn-1FH-pmi9NTqTFNL7yzeBw/edit?usp=sharing)
+* * [Gráfico Matriz de habilidades](https://gitlab.com/cesaraugusto98/webbot/blob/master/Imagens/Matriz_de_Habilidades_-_P%C3%A1gina1.pdf)
