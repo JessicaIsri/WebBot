@@ -8,11 +8,11 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 * Giovanni Guidance
 * Jessica Dias
 * Igor Silva
-* Nathan
+* Nathan Augusto
 
 # Objetivo
 * Aumentar os laços de relacionamento entre os alunos do 6º e 1º Semestre de Banco de Dados.
-* Atráves do auxilio do PO/Scrum Master os alunos do 1º Semestre desenvolverão um Webbot para rapsgagem ou teste de alcance de propagandas de MKT.
+* Atráves do auxilio do PO/Scrum Master os alunos do 1º Semestre desenvolverão um Webbot para raspagem ou teste de alcance de propagandas de MKT.
 * Criar um Webbot capaz de facilitar a pesquisa de mercado para pequenas empresas de São José dos Campos.
 
 # Ferramentas
@@ -20,7 +20,7 @@ Projeto de Webbot - FATEC Prof. Jessen Vidal - São José dos Campos
 * Slack
 * Visual Studio Code
 * Zoom Conference
-* Trello + Cartolina
+* Cartolina
 * BD Firebase
 * Python
 * Django
