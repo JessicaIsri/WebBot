@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<style>
+		body{
+		background-image: url("fundo.jpg");
+		}
+	</style>
+    <title>Pesquisar Empresas</title>
+</head>
+<body>
+  </body>
+</html>
