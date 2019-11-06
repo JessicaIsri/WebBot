@@ -23,8 +23,23 @@ for files in path:
                 if cidade == 'SAO JOSE DOS CAMPOS':
                     cep = line[674:682]
                     cnpj = line[3:18]
+                    nomeFantasia = line[168:223]
+
+                    # situação cadastral
+                    # 01 - NULA
+                    # 02 - ATIVA
+                    # 03 - SUSPENSA
+                    # 04 - INAPTA
+                    # 8 - BAIXADA
+                    situacao = line[223:2]
+                    data = line[225:231]
+                    logadouro = line[402:462]
+                    telefone = line[738:750]
+                    email = line[775:924]
+
                     #cria o json a ser inserido
-                    empresa = {'cnpj': cnpj, 'cep': cep, 'cidade': cidade}
+                    empresa = {'cnpj': cnpj, 'Fantasia': nomeFantasia, 'situacao': situacao, 'data_situacao': data,
+                               'cep': cep, 'cidade': cidade, 'logadouro': logadouro, }
 
                     #insere o json no banco
                     db.insertOne(empresa)

@@ -1,5 +1,7 @@
+import os
 b = 102400
 kb = b*100
+
 
 
 def read_in_chunks(file_object, chunk_size=kb):

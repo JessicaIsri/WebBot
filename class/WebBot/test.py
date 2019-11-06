@@ -1,5 +1,5 @@
-from Driver import *
-from Extracter import *
 
-Extracter()
-# Driver('12223300')
+import shutil
+shutil.make_archive("E:\\FATEC\\PI\\Files\\zips\\zipFrags", "zip", "E:\\FATEC\\PI\\Files\\frags")
+
+
