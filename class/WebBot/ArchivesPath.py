@@ -1,6 +1,7 @@
 import os
 import shutil
 from Driver import *
+from DataBase import *
 
 
 class ArchivesPath:
@@ -29,9 +30,9 @@ class ArchivesPath:
     def readerArchive(self):
         directory = 'E:\\FATEC\\PI\\Files\\frags'
         path = os.listdir(directory)
-        db = DataBase
+        db = DataBase()
         for files in path:
-            print(files)
+            # print(files)
             file = open(directory + '\\' + files)
             for line in file:
                 text = line.split(' ')
@@ -39,32 +40,35 @@ class ArchivesPath:
                 pos = text[0].find('F')
                 # print(pos)
                 if pos == 1:
-                    try:
-                        # obtem o valor da cidade
-                        cidade = line[688:738]
 
-                        # especifica por dados provinientes de são jose
-                        if cidade == 'SAO JOSE DOS CAMPOS':
-                            cep = line[674:682]
-                            cnpj = line[3:18]
-                            nome_fantasia = line[168:223]
+                    # obtem o valor da cidade
+                    cidade = line[688:738]
+                    print(cidade)
+                    # especifica por dados provinientes de são jose
+                    # cidade = 'SAO JOSE DOS CAMPOS'
+                    if cidade == 'SAO JOSE DOS CAMPOS                                         ' or cidade == "SAO PAULO                                         ":
+                        cep = line[674:682]
+                        cnpj = line[3:18]
+                        nome_fantasia = line[168:223]
 
-                            # situação cadastral
-                            # 01 - NULA # 02 - ATIVA # 03 - SUSPENSA  # 04 - INAPTA  # 8 - BAIXADA
-                            situacao = line[223:2]
-                            data = line[225:231]
-                            logadouro = line[402:462]
-                            telefone = line[738:750]
-                            email = line[775:924]
-                            coordenadas = Driver(cep).openSite()
-                            # cria o json a ser inserido
-                            empresa = {'cnpj': cnpj, 'Fantasia': nome_fantasia, 'situacao': situacao,
-                                       'data_situacao': data,
-                                       'cep': cep, 'cidade': cidade, 'endereco': coordenadas[0],
-                                       'latitude': coordenadas[1], 'longitude': coordenadas[2]}
+                        # situação cadastral
+                        # 01 - NULA # 02 - ATIVA # 03 - SUSPENSA  # 04 - INAPTA  # 8 - BAIXADA
+                        situacao = line[223:2]
+                        data = line[225:231]
+                        logadouro = line[402:462]
+                        telefone = line[738:750]
+                        email = line[775:924]
+                        coordenadas = Driver(cep, cnpj).openSite()
+                        print(coordenadas)
+                        # cria o json a ser inserido
+                        empresa = {'cnpj': cnpj, 'Fantasia': nome_fantasia, 'situacao': situacao,
+                                   'data_situacao': data,
+                                   'cep': cep, 'cidade': cidade, 'endereco': coordenadas[2],
+                                   'latitude': coordenadas[0], 'longitude': coordenadas[1]}
+                        print(empresa)
+                        # exit()
 
-                            # insere o json no banco
-                            db.insertOne(empresa)
-                    except:
-                        print("Não possui o dado requirido")
+                        # insere o json no banco
+                        db.insertOne(empresa)
+
         shutil.make_archive("E:\\FATEC\\PI\\Files\\zips\\zipFrags", "zip", "E:\\FATEC\\PI\\Files\\frags")

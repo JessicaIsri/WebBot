@@ -1,5 +1,5 @@
-
-import shutil
-shutil.make_archive("E:\\FATEC\\PI\\Files\\zips\\zipFrags", "zip", "E:\\FATEC\\PI\\Files\\frags")
+from ArchivesPath import *
+from Driver import *
+Driver('70.040-912', '00000000000191').openSite()
 
 
