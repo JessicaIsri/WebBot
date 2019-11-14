@@ -61,10 +61,10 @@ class ArchivesPath:
                         coordenadas = Driver(cep, cnpj).openSite()
                         print(coordenadas)
                         # cria o json a ser inserido
-                        empresa = {'cnpj': cnpj, 'Fantasia': nome_fantasia, 'situacao': situacao,
+                        empresa = {'cnpj': cnpj, 'Fantasia': coordenadas[4], 'situacao': situacao,
                                    'data_situacao': data,
                                    'cep': cep, 'cidade': cidade, 'endereco': coordenadas[2],
-                                   'latitude': coordenadas[0], 'longitude': coordenadas[1]}
+                                   'latitude': coordenadas[0], 'longitude': coordenadas[1], 'codigo_atividade': coordenadas[3], }
                         print(empresa)
                         # exit()
 

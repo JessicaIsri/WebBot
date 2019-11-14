@@ -47,7 +47,7 @@ class Driver:
             codigo_atividade = text_cnpj[6].split(' ')[7]
             nome_empresarial = text_cnpj[4].split(': ')[1]
             descricao = text_cnpj[6].split(' ')[9:]
-        return [latitude, longitude, endereco, codigo_atividade]
+        return [latitude, longitude, endereco, codigo_atividade, nome_empresarial]
         # print(endereco, latitude, longitude)
 
 
