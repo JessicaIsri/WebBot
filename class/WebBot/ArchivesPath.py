@@ -59,12 +59,19 @@ class ArchivesPath:
                         telefone = line[738:750]
                         email = line[775:924]
                         coordenadas = Driver(cep, cnpj).openSite()
-                        print(coordenadas)
+                        # print(coordenadas)
                         # cria o json a ser inserido
-                        empresa = {'cnpj': cnpj, 'Fantasia': coordenadas[4], 'situacao': situacao,
-                                   'data_situacao': data,
-                                   'cep': cep, 'cidade': cidade, 'endereco': coordenadas[2],
-                                   'latitude': coordenadas[0], 'longitude': coordenadas[1], 'codigo_atividade': coordenadas[3], }
+                        try:
+                            empresa = {'cnpj': cnpj, 'Fantasia': coordenadas[4], 'situacao': situacao,
+                                       'data_situacao': data,
+                                       'cep': cep, 'cidade': cidade, 'endereco': coordenadas[2],
+                                       'latitude': coordenadas[0], 'longitude': coordenadas[1], 'codigo_atividade': coordenadas[3], }
+                        except:
+                            empresa = {'cnpj': cnpj,  'situacao': situacao,
+                                       'data_situacao': data,
+                                       'cep': cep,
+                                       'latitude': coordenadas[0], 'longitude': coordenadas[1],
+                                        }
                         print(empresa)
                         # exit()
 

@@ -25,5 +25,5 @@ mapa = folium.Map(location=[-23.4795233,-46.2698754],zoom_start=10)
 
 for i in range(qtd_range):
     folium.Marker([latitude[i], longitude[i]], popup='CNPJ: '+cnpj[i]+'\n Endereco: '+endereco[i]).add_to(mapa)
-
+    print(i)
 mapa.save("../templates/mapa.html")

@@ -36,18 +36,27 @@ class Driver:
         print([latitude, longitude, endereco])
 
         if self.cnpj:
-            self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
-            self.driver.find_element_by_id('keywords').clear()
-            self.driver.find_element_by_id('keywords').send_keys(self.cnpj[0:14])
-            self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
-            sleep(10)
-            text_cnpj = self.driver.find_element_by_xpath('/html/body/main/div[5]/div/div[1]/p[1]').text
-            text_cnpj = text_cnpj.split('\n')
+            try:
+                self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
+                self.driver.find_element_by_id('keywords').clear()
+                self.driver.find_element_by_id('keywords').send_keys(self.cnpj[0:14])
+                self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
+                sleep(10)
+                text_cnpj = self.driver.find_element_by_xpath('/html/body/main/div[5]/div/div[1]/p[1]').text
+                text_cnpj = text_cnpj.split('\n')
+                print(text_cnpj)
 
-            codigo_atividade = text_cnpj[6].split(' ')[7]
-            nome_empresarial = text_cnpj[4].split(': ')[1]
-            descricao = text_cnpj[6].split(' ')[9:]
-        return [latitude, longitude, endereco, codigo_atividade, nome_empresarial]
+                codigo_atividade = text_cnpj[6].split(' ')[7]
+                nome_empresarial = text_cnpj[4].split(': ')[1]
+                descricao = text_cnpj[6].split(' ')[9:]
+                # self.driver.close()
+                return [latitude, longitude, endereco, codigo_atividade, nome_empresarial]
+            except:
+                # self.driver.close()
+                return [latitude, longitude]
+            # self.driver.quit()
+
+
         # print(endereco, latitude, longitude)
 
 
