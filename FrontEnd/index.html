@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
+
 	<link rel="shortcut icon" href="img/MiniaturaPE.jpg" >
 	<title>PESQUISA EMPRESAS</title>
 
@@ -17,6 +17,7 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet">
 
   <!-- Theme CSS -->
   <link href="css/webbot.min.css" rel="stylesheet">
@@ -108,11 +109,16 @@
     <div class="container">
       <h1>Selecione sua Pesquisa</h1>
       <p class="lead">Você prefere que o mapa seja apresentado por mapa de calor ou por ponto?</p>
-	  <button class="btn btn-large btn-primary" id=""> <big> <big><big> CALOR </big></big></big></button>
-	  <button class="btn btn-large btn-primary" id=""> <big> <big><big> PONTO </big></big></big></button>
+	  
+	<button type="button" class="efeito efeito-1"> CALOR </button>
+
+	<button type="button" class="efeito efeito-2"> PONTO </button>
+	
+	</br>
+	
       <form>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Selecione um Ramo</label>
+          <label for="exampleFormControlSelect1"><h2>Selecione um Ramo</h2></label>
           <select class="form-control" id="exampleFormControlSelect1">
             <option>Alimentos</option>
             <option>Serviços</option>
@@ -131,7 +137,9 @@
   <section class="py-5">
     <div class="container">
       <h1>Confira no mapa!!</h1>
-      <label>Temos x empresas desse ramo em São José dos Campos</label>
+		</br></br></br>
+	  
+	  <h2>MAPA DE CALOR</h2>
 
       <div style="width: 1000px;height: 500px;">
 	   <div style="<div style=width:500px; height:550px; border: solid 100%;">	   
@@ -139,10 +147,27 @@
 		</div>
       </div>
     </div>
-  </section>
-  
+	</section>
+	</br></br></br>
+	
+	
+	<section CLASS="PY-5">
+    <div class="container">
+	
+      <h2>MAPA DE PONTOS</h2>
+
+      <div style="width: 1000px;height: 500px;">
+	   <div style="<div style=width:500px; height:550px; border: solid 100%;">	   
+        <iframe src="mapa_pontos.html" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen ></iframe>
+		</div>
+      </div>
     </div>
   </section>
+
+    </div>
+  </section>
+
+  
 
   <!-- sobre Section -->
   <section class="page-section sobre" id="sobre">
