@@ -1,3 +1,0 @@
-Para o desenvolvimento do FrontEnd utilizaremos do BootStrap, pois ele possui uma extensa biblioteca de componentes, permite o reuso de códigos, sua documentação é sempre atualizada, ele traz a responsividade,ou seja, o site é adaptado a diferentes telas de diferentes dispositivos.
-E também faremos uso do CSS para definir um padrão de estilo para os documentos, incluindo design, layout, e as variações na exibição para diferentes dispositivos.
-Inicialmente não haverá tela de login, o usuário que tiver o acesso, caírá direto na pagina de pesquisa, que terá como filtros,primordialmente: pesquisa por Ramo da esmpresas, pesquisa por CNPJ's das empresas,e, pesquisa por CEP's das empresas.
