@@ -16,5 +16,37 @@ As seguintes tecnologias foram adotadas na solução desenvolvida:
 # Contribuições individuais/pessoais
 Contribui com o desenvolvimento do bot que recuperava os arquivos fornecedos pela Receita Federal, rotinas de leitura dos arquivos dos quais cada um continha aproximadamente 5GB de dados. Para além do metodo de recuperação dos dados espaciais através do dado do CEP.
 
+Motor de extração de dados Geograficos
+- Class Driver
+```
+def __init__(self, cep):
+        self.driver = webdriver.Chrome(executable_path='C:\\webbot\\chromedriver')
+        self.wait = WebDriverWait(self.driver, 5)
+        self.cep = cep
+        self.openSite()
+```
+Como podemos observar pelo construtor da classe, temos algumas configurações padrões a serem feitas para o correto funcionamento do bot que irá extrair os arquivos, tais como
+- Driver a ser utilizado pelo Selenium:  O driver é um executavél que permite a manipulação de ações automáticas em cima da janela do navegador, sendo assim é necessario indicar o caminho do executavel na inicialização do Webdriver. Esse arquivo varia de navegador para navegador, por exemplo no chrome e chromium utilizamos o chromedrive, enquanto que no Mozila Firefox temos o GeckoDrive
+- Wait: semelhante a função sleep ele adiciona um modo de espera ao driver, algumas ações não tem reações imediatas, por exemplo ao clickar sobre um botão de refresh, temos de aguardar até que a ação seja concluida, desse modo precisamos aguardar esse evento se concluir. Com base nisso temos de definir um tempo máximo para que essa ação seja concluida.
+- Class Driver, método openSite
+```
+ def openSite(self):
+        self.driver.get("https://www.mapacep.com.br/index.php")
+        self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
+        self.driver.find_element_by_id('keywords').send_keys(self.cep)
+        self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
+        sleep(10)
+        try:
+            text = self.driver.find_element_by_xpath('/html/body/main/div[3]/div/div[1]/p').text.split('\n')
+            endereco = text[0]
+            latitude = text[3]
+            longitude = text[4]
+            print(endereco, latitude, longitude)
+        except:
+            cnpj = self.driver.find_element_by_xpath('/html/body/main/div[7]/div/div[1]/p[1]').text
+            print(cnpj)
+```
+O código acima traz uma exemplificação da extração dos dados presentes no site https://www.mapacep.com.br/index.php, após ser realizado o filtro por cep.
+
 # Aprendizados Efetivos
 O principal aprendizado se deu com a leitura dos dados, uma vez que cada arquivo continha no minimo 5GB, logo não sendo possivél carrega-los inteiramente de uma unica vez sem sobrecarregas a memoria do sistema, sendo inicialente utilizado uma fragmentação do arquivo, porém posteriormente foi adotado o pandas devido sua melhor performace com os dataframes, alem de proporcionar uma serie de ferramentas uteis para a manipulação dos dados.
