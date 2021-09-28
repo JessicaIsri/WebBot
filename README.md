@@ -16,7 +16,7 @@ As seguintes tecnologias foram adotadas na solução desenvolvida:
 # Contribuições individuais/pessoais
 Contribui com o desenvolvimento do bot que recuperava os arquivos fornecedos pela Receita Federal, rotinas de leitura dos arquivos dos quais cada um continha aproximadamente 5GB de dados. Para além do metodo de recuperação dos dados espaciais através do dado do CEP.
 
-Motor de extração de dados Geograficos
+### Motor de extração de dados Geograficos
 - Class Driver
 ```
 def __init__(self, cep):
@@ -47,6 +47,31 @@ Como podemos observar pelo construtor da classe, temos algumas configurações p
             print(cnpj)
 ```
 O código acima traz uma exemplificação da extração dos dados presentes no site https://www.mapacep.com.br/index.php, após ser realizado o filtro por cep.
+### Processo de Leitura
+```
+b = 102400
+kb = b*100
+def read_in_chunks(file_object, chunk_size=kb):
+    while True:
+        data = file_object.read(chunk_size)
+        if not data:
+            break
+        yield data
+
+
+f = open('E:\\FATEC\\PI\\Files\\K3241.K03200DV.D90805.L00001')
+count = 1
+for piece in read_in_chunks(f):
+    print(piece)
+    new = open('E:\\FATEC\\PI\\Files\\frags\\frag'+str(count)+'.txt', 'w')
+    new.writelines(piece)
+    new.close()
+    count += 1
+```
+
+**O uso do yield:** O yield cria um generator, uma lista de dados que serão consumidos sob demanda, sendo assim pode ser utilizado para uma melhor abstração do codigo. Nesse caso em especifico era necessário ele foi utilizado para fragmentar arquivos txt com mais de 5Gb, que seriam grandes demais para ler de uma unica vez. Logo o codigo retora os dados presentes para cara "pedaço" de 10mb, um novo arquivo é gerado.
+
+
 
 # Aprendizados Efetivos
 O principal aprendizado se deu com a leitura dos dados, uma vez que cada arquivo continha no minimo 5GB, logo não sendo possivél carrega-los inteiramente de uma unica vez sem sobrecarregas a memoria do sistema, sendo inicialente utilizado uma fragmentação do arquivo, porém posteriormente foi adotado o pandas devido sua melhor performace com os dataframes, alem de proporcionar uma serie de ferramentas uteis para a manipulação dos dados.
