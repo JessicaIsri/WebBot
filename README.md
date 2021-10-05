@@ -74,4 +74,6 @@ for piece in read_in_chunks(f):
 
 
 # Aprendizados Efetivos
-O principal aprendizado se deu com a leitura dos dados, uma vez que cada arquivo continha no minimo 5GB, logo não sendo possivél carrega-los inteiramente de uma unica vez sem sobrecarregas a memoria do sistema, sendo inicialente utilizado uma fragmentação do arquivo, porém posteriormente foi adotado o pandas devido sua melhor performace com os dataframes, alem de proporcionar uma serie de ferramentas uteis para a manipulação dos dados.
+Com base nas rotinas desenvolvidas, pode se  absorver o uso do generator para criar estados de codigo que serão aproveitados ao longo da execução, posteriormente foi cogitado o uso do pandas para tal, uma vez que ele lida com a manipulação de dataframes, logo, além de apresentar melhor desempenho ainda entrega uma serie de funções uteis e facilidades para o uso dos dados principalmente quando está aliado ao numpy.
+Para o caso do webbot, foi essencial o uso do wait para a espera dos eventos do navegador, e dessa maneira evitar erros relacionados a falta de algum elemento na pagina.
+Contudo, pode se afirmar que o real aprendizado se deu em relação ao inicio da manipulação dos dados contanto quase que exclsivamente das bibliotecas nativas da propria linguagem do python.
